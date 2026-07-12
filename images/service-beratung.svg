@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Illustration: ansteigende Trendlinie mit Kompass für Unternehmensberatung">
+  <rect width="400" height="240" fill="#0e2436"/>
+  <polyline points="60,190 128,150 186,168 246,102 306,66" fill="none" stroke="#4a9fd9" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#2e7dae">
+    <circle cx="60" cy="190" r="6"/>
+    <circle cx="128" cy="150" r="6"/>
+    <circle cx="186" cy="168" r="6"/>
+    <circle cx="246" cy="102" r="6"/>
+  </g>
+  <circle cx="306" cy="66" r="6" fill="#4a9fd9"/>
+  <g transform="translate(306,66)">
+    <circle r="34" fill="none" stroke="#4a9fd9" stroke-width="2.5" opacity="0.55"/>
+    <circle r="4" fill="#4a9fd9"/>
+    <path d="M0 0 L14 -22 L4 -8 Z" fill="#4a9fd9"/>
+  </g>
+  <line x1="55" y1="196" x2="345" y2="196" stroke="#2e7dae" stroke-width="1.5" opacity="0.4"/>
+</svg>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Illustration: aufgeschlagenes Ledgerbuch mit Buchungszeilen für Buchhaltung">
+  <rect width="400" height="240" fill="#0e2436"/>
+  <path d="M200 58 L72 70 L72 190 L200 178 Z" fill="#163a54" stroke="#2e7dae" stroke-width="1.5"/>
+  <path d="M200 58 L328 70 L328 190 L200 178 Z" fill="#163a54" stroke="#2e7dae" stroke-width="1.5"/>
+  <line x1="200" y1="58" x2="200" y2="178" stroke="#2e7dae" stroke-width="2"/>
+  <g stroke="#4a9fd9" stroke-width="2.5" stroke-linecap="round" opacity="0.85">
+    <line x1="86" y1="92" x2="182" y2="86"/>
+    <line x1="86" y1="110" x2="182" y2="104"/>
+    <line x1="86" y1="128" x2="170" y2="122"/>
+    <line x1="86" y1="146" x2="182" y2="140"/>
+    <line x1="86" y1="164" x2="160" y2="158"/>
+  </g>
+  <g stroke="#4a9fd9" stroke-width="2.5" stroke-linecap="round" opacity="0.85">
+    <line x1="218" y1="86" x2="314" y2="92"/>
+    <line x1="218" y1="104" x2="314" y2="110"/>
+    <line x1="218" y1="122" x2="300" y2="128"/>
+    <line x1="218" y1="140" x2="314" y2="146"/>
+    <line x1="218" y1="158" x2="290" y2="163"/>
+  </g>
+  <g transform="translate(298,26)">
+    <circle cx="24" cy="24" r="24" fill="#4a9fd9"/>
+    <path d="M15 33l3-10 18-18 7 7-18 18-10 3z" fill="none" stroke="#0e2436" stroke-width="3" stroke-linejoin="round"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" role="img" aria-label="Illustration: aufsteigende Balkengrafik mit Waage-Symbol für Bilanzierung">
+  <rect width="400" height="240" fill="#0e2436"/>
+  <line x1="55" y1="66" x2="345" y2="66" stroke="#4a9fd9" stroke-width="1.5" opacity="0.45"/>
+  <rect x="330" y="30" width="44" height="44" rx="22" fill="#4a9fd9" opacity="0"/>
+  <g>
+    <rect x="72" y="150" width="38" height="50" rx="4" fill="#2e7dae"/>
+    <rect x="128" y="120" width="38" height="80" rx="4" fill="#2e7dae"/>
+    <rect x="184" y="95" width="38" height="105" rx="4" fill="#4a9fd9"/>
+    <rect x="240" y="60" width="38" height="140" rx="4" fill="#4a9fd9"/>
+  </g>
+  <circle cx="66" cy="66" r="4" fill="#4a9fd9"/>
+  <circle cx="334" cy="66" r="4" fill="#4a9fd9"/>
+  <circle cx="200" cy="66" r="5" fill="#0e2436" stroke="#4a9fd9" stroke-width="2"/>
+  <g transform="translate(298,26)">
+    <circle cx="24" cy="24" r="24" fill="#4a9fd9"/>
+    <path d="M14 25l7 7 15-16" stroke="#0e2436" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
