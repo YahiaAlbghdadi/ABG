@@ -123,7 +123,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ===== Hero ===== */
 .hero { position: relative; overflow: hidden; background: var(--ink); }
-.hero__inner { position: relative; padding: clamp(64px, 8vw, 112px) 0 clamp(56px, 7vw, 96px); }
+.hero__inner { position: relative; padding-top: clamp(64px, 8vw, 112px); padding-bottom: clamp(56px, 7vw, 96px); }
 .hero__content { max-width: 700px; }
 .hero__headline { color: var(--paper); }
 .hero__lead { font-size: 1.14rem; color: var(--paper-on-ink-dim); max-width: 560px; }
@@ -157,7 +157,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ===== Trust strip ===== */
 .trust { border-bottom: 1px solid var(--line); background: var(--paper-card); }
-.trust__inner { padding: 20px 0; }
+.trust__inner { padding-block: 20px; }
 .trust__list { display: flex; gap: 12px 0; flex-wrap: wrap; justify-content: center; font-family: var(--mono); }
 .trust__list li {
   position: relative; padding: 0 22px; font-size: .82rem; letter-spacing: .04em;
