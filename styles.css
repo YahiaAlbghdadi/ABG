@@ -52,7 +52,7 @@ h1 { font-size: clamp(2.4rem, 5.4vw, 4.4rem); font-weight: 500; }
 h2 { font-size: clamp(1.7rem, 3.3vw, 2.5rem); }
 h3 { font-size: 1.22rem; font-weight: 600; }
 p { margin: 0 0 1rem; }
-ul { margin: 0; padding: 0; list-style: none; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .container { width: 100%; max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
 
@@ -93,7 +93,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 
 /* ===== Topbar ===== */
 .topbar { background: var(--ink); color: var(--paper-on-ink-dim); font-size: .8rem; border-bottom: 1px solid var(--line-on-ink); }
-.topbar__inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; height: 40px; font-family: var(--mono); }
+.topbar__inner { display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 40px; padding-block: 8px; font-family: var(--mono); }
 .topbar__contact { display: flex; gap: 10px; align-items: center; }
 .topbar__contact a:hover { color: var(--brass-bright); }
 .topbar__sep { opacity: .5; }
@@ -253,7 +253,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 .step p { font-size: .93rem; margin: 0; }
 
 /* ===== Booking / contact forms (shared field styling) ===== */
-.field { display: flex; flex-direction: column; grid-column: 1 / -1; }
+.field { display: flex; flex-direction: column; grid-column: 1 / -1; min-width: 0; }
 .field--half { grid-column: span 1; }
 .field--full { grid-column: 1 / -1; }
 .field label {
@@ -261,8 +261,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   text-transform: uppercase; color: var(--forest); margin-bottom: 8px;
 }
 .field input, .field select, .field textarea {
-  font-family: var(--sans); font-size: .98rem; padding: 12px 14px; border: 1.5px solid var(--line);
-  border-radius: 2px; background: var(--paper-card); color: var(--ink); transition: .18s;
+  width: 100%; min-width: 0; font-family: var(--sans); font-size: .98rem; padding: 12px 14px;
+  border: 1.5px solid var(--line); border-radius: 2px; background: var(--paper-card); color: var(--ink); transition: .18s;
 }
 .field input:focus, .field select:focus, .field textarea:focus {
   outline: none; border-color: var(--brass); background: #fff;
@@ -385,7 +385,10 @@ ul { margin: 0; padding: 0; list-style: none; }
   .booking { padding: 22px; }
   .booking__grid { grid-template-columns: 1fr; }
   .timeslots { grid-template-columns: repeat(2, 1fr); }
+  .topbar__inner { justify-content: center; }
   .topbar__contact { font-size: .74rem; gap: 8px; }
+  .topbar__contact .topbar__sep, .topbar__contact a[href^="mailto:"] { display: none; }
+  .topbar__langs { display: none; }
   .total { padding: 0 16px; }
 }
 
