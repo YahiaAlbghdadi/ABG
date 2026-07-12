@@ -360,6 +360,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .balance__totals { gap: 8px 0; }
 }
 @media (max-width: 760px) {
+  .trust { display: none; }
   .topbar__addr { display: none; }
   .nav {
     position: fixed; inset: 78px 0 auto 0; flex-direction: column; align-items: stretch;
