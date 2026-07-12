@@ -5,14 +5,17 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  var reduceMotionQuery = window.matchMedia
+    ? window.matchMedia("(prefers-reduced-motion: reduce)")
+    : { matches: false };
+
   // Hero rotating service word
   var rotator = document.getElementById("heroRotator");
   if (rotator) {
     var words = ["Bilanzierung", "Buchhaltung", "Personalverrechnung", "Unternehmensberatung"];
-    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     var idx = 0;
 
-    if (!reduceMotion) {
+    if (!reduceMotionQuery.matches) {
       setInterval(function () {
         rotator.classList.add("is-swapping");
         setTimeout(function () {
@@ -53,6 +56,16 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  // Scroll to top: the native "#top" anchor jump is a no-op because the
+  // target (.header) is position:sticky and already sits at y=0 visually,
+  // so the browser sees nothing to scroll to. Handle it explicitly instead.
+  document.querySelectorAll('a[href="#top"]').forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotionQuery.matches ? "auto" : "smooth" });
+    });
+  });
+
   // Reveal on scroll
   var reveals = document.querySelectorAll(".reveal");
   if ("IntersectionObserver" in window) {
@@ -73,8 +86,19 @@
   var bookingForm = document.getElementById("bookingForm");
   var bkDate = document.getElementById("bkDate");
   var bkTime = document.getElementById("bkTime");
+  var bkService = document.getElementById("bkService");
   var timeslotsWrap = document.getElementById("timeslots");
   var bookingStatus = document.getElementById("bookingStatus");
+
+  // Service cards link straight into the booking form with the matching
+  // service pre-selected, instead of the customer having to pick it again.
+  if (bkService) {
+    document.querySelectorAll(".card__link[data-service]").forEach(function (link) {
+      link.addEventListener("click", function () {
+        bkService.value = link.dataset.service;
+      });
+    });
+  }
 
   if (bkDate) {
     var today = new Date();
