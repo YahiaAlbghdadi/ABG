@@ -5,6 +5,25 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  // Hero rotating service word
+  var rotator = document.getElementById("heroRotator");
+  if (rotator) {
+    var words = ["Bilanzierung", "Buchhaltung", "Personalverrechnung", "Unternehmensberatung"];
+    var reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var idx = 0;
+
+    if (!reduceMotion) {
+      setInterval(function () {
+        rotator.classList.add("is-swapping");
+        setTimeout(function () {
+          idx = (idx + 1) % words.length;
+          rotator.textContent = words[idx];
+          rotator.classList.remove("is-swapping");
+        }, 320);
+      }, 2400);
+    }
+  }
+
   // Mobile nav toggle
   var toggle = document.getElementById("navToggle");
   var nav = document.getElementById("nav");
